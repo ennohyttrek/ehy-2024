@@ -18,6 +18,8 @@ function register_my_menus() {
  }
  add_action( 'init', 'register_my_menus' );
 
+//add themes supports (for simplicity of code not in a function)
+add_theme_support( 'disable-layout-styles' );
 add_theme_support( 'post-thumbnails' );
 
 
