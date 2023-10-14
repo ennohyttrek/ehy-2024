@@ -5,3 +5,60 @@ Author: Enno Hyttrek
 Author URI: https://ennohyttrek.de
 Version: 1.0.0
 ---------------------*/
+
+/*---------------------
+RESET
+---------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/*---------------------
+LAYOUT
+---------------------*/
+
+/*---------------------
+NAVIGATION
+---------------------*/
+
+/**--------
+Nav Reset
+--------**/
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+/*---------------------
+COLOR & STYLE
+---------------------*/
+
+/*---------------------
+TYPOGRAPHY
+---------------------*/
+
+/*---------------------
+COMPONENTS
+---------------------*/
+
+/*---------------------
+RESPONSIVE
+---------------------*/
+
+/*---------------------
+TMP DEV
+---------------------*/
