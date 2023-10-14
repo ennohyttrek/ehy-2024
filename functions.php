@@ -2,6 +2,7 @@
 
 function myCustomTheme_stylesheets() {
     wp_enqueue_style( 'style', get_stylesheet_uri());
+    wp_enqueue_style( 'inter-font-redux', get_template_directory_uri() . '/assets/fonts/inter-redux/font-style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'myCustomTheme_stylesheets' );
 
