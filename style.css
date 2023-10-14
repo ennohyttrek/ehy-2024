@@ -3,7 +3,7 @@ Theme Name: EHy 2023
 Theme URI: https://github.com/ennohyttrek/ehy-2024
 Author: Enno Hyttrek
 Author URI: https://ennohyttrek.de
-Version: 1.0.0
+Version: 1.0.1
 ---------------------*/
 
 /*---------------------
@@ -32,7 +32,8 @@ Layout Variables
 --------**/
 
 :root {
-    --grid-unit: calc((100vw / 14) * 1);
+    --grid-factor: 14;
+    --grid-unit: calc(100% / var(--grid-factor));
     --page-margin: 8px;
 }
 
@@ -85,7 +86,7 @@ Layout Content Sections
 }
 
 .cols {
-    column-count: 3;
+    column-count: 4;
     column-gap: calc(var(--page-margin) * 2);
 }
 
@@ -194,9 +195,9 @@ Comp Placeholder
 --------**/
 
 div.placeholder {
-    width: calc(var(--grid-unit) *1); /*why?*/
-    height: calc(var(--grid-unit) *1);
-    font-size: calc(var(--grid-unit) / 8);
+    width: calc(var(--grid-unit) *1); 
+    height: calc(100vw / var(--grid-factor));
+    font-size: calc(var(--grid-unit) / 6);
     font-weight: 400;
     /*    background: var(--col-cool-grey-mid-dark);*/
     color: var(--col-cool-meta-white);
@@ -204,7 +205,7 @@ div.placeholder {
 }
 
 .grid-7 div.placeholder {
-    width: calc(var(--grid-unit) *2); /*why?*/
+    width: calc(var(--grid-unit) *2); 
 }
 
 div.placeholder p {
