@@ -107,6 +107,17 @@ TYPOGRAPHY
 COMPONENTS
 ---------------------*/
 
+/**--------
+Comp Placeholder
+--------**/
+
+div.placeholder {
+    width: 100px;
+    height: 100px;
+    background: var(--col-cool-grey-mid-dark);
+    color: var(--col-cool-grey-mid-light);
+}
+
 /*---------------------
 RESPONSIVE
 ---------------------*/
