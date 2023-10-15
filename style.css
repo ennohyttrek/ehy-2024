@@ -3,7 +3,7 @@ Theme Name: EHy 2023
 Theme URI: https://github.com/ennohyttrek/ehy-2024
 Author: Enno Hyttrek
 Author URI: https://ennohyttrek.de
-Version: 1.0.1
+Version: 1.0.2
 ---------------------*/
 
 /*---------------------
@@ -186,6 +186,10 @@ h2 {
     font-weight: 200;
 }
 
+.main-footer {
+    font-size: 0.8em;
+}
+
 /*---------------------
 COMPONENTS
 ---------------------*/
@@ -197,7 +201,7 @@ Comp Placeholder
 div.placeholder {
     width: calc(var(--grid-unit) *1); 
     height: calc(100vw / var(--grid-factor));
-    font-size: calc(var(--grid-unit) / 6);
+    font-size: calc((100vw / var(--grid-factor)) / 9);
     font-weight: 400;
     /*    background: var(--col-cool-grey-mid-dark);*/
     color: var(--col-cool-meta-white);
@@ -212,6 +216,36 @@ div.placeholder p {
     background: var(--col-cool-grey-mid-light);
     padding: 0.5em;
     height: 100%;
+}
+/**--------
+Comp Loop 7
+--------**/
+
+ul.loop-7 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.loop-7 h2 {
+    font-size: calc((100vw / var(--grid-factor)) / 7);
+    padding: 0.3em var(--page-margin);
+}
+
+
+ul.loop-7 > li {
+    width: calc(var(--grid-unit) * 2);
+}
+
+ul.loop-7.var-1 > li:nth-child(2) {
+    width: calc(var(--grid-unit) * 1);
+}
+
+ul.loop-7.var-1 > li:nth-child(3) {
+    width: calc(var(--grid-unit) * 3);
+}
+
+ul.loop-7.var-1 > li:nth-child(5) {
+        width: calc(var(--grid-unit) * 4);
 }
 
 /*---------------------

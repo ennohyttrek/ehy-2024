@@ -1,4 +1,4 @@
-<!--Version: 1.0.1-->
+<!--Version: 1.0.2-->
 <!DOCTYPE html>
 <html>
 
@@ -39,7 +39,7 @@
         <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
     </nav>
         <p>© 2023 Enno Hyttrek</p>
-        <p>Version: 1.0.1</p>
+        <p>Version: 1.0.2</p>
     </footer>
     <nav id="mobile-nav" class="mobile-nav">
         <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>
