@@ -1,13 +1,15 @@
-<!--Version: 1.0.2-->
+<!--Version: 1.0.3-->
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><?php bloginfo('title'); ?></title>
-         <?php wp_head() ?>
-    </head>
-    <body>
 
-        <?php
+<head>
+    <title><?php bloginfo('title'); ?></title>
+    <?php wp_head() ?>
+</head>
+
+<body>
+
+    <?php
         if ( have_posts() ) :
             while ( have_posts() ) : the_post();
 
@@ -16,7 +18,8 @@
             endwhile;
         endif;
         ?>
+    
+    <?php wp_footer() ?>
+</body>
 
-        <?php wp_footer() ?>
-    </body>
 </html>

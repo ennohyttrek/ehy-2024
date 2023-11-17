@@ -1,9 +1,9 @@
 /*---------------------
-Theme Name: EHy 2023
+Theme Name: EHy 2024
 Theme URI: https://github.com/ennohyttrek/ehy-2024
 Author: Enno Hyttrek
 Author URI: https://ennohyttrek.de
-Version: 1.0.2
+Version: 1.0.3
 ---------------------*/
 
 /*---------------------
@@ -78,7 +78,7 @@ Layout Flexbox: basic flexbox
 
 /**--------
 Layout Content Sections
---------**/ 
+--------**/
 
 .content-section-margin {
     padding: 2rem var(--page-margin);
@@ -89,6 +89,48 @@ Layout Content Sections
     column-count: 4;
     column-gap: calc(var(--page-margin) * 2);
 }
+
+.ehy-content-section {
+        padding: 1rem calc(var(--page-margin) + var(--grid-unit));
+}
+
+
+
+/**--------
+Layout Post Galleries
+--------**/
+
+.ehy-grid-12 > div > ul {
+    padding: 1rem calc(var(--page-margin) + var(--grid-unit));
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ehy-grid-12 > div > ul > li {
+    position: relative;
+    width: 33.33%;
+}
+
+.ehy-grid-12 > div > ul > li > .wp-block-post-title {
+    position: absolute;
+    z-index: 1000;
+    width: 89%;
+    padding: var(--page-margin);
+    border-radius: 0 0 3em 0;
+    display: none;
+}
+
+.ehy-grid-12 > div > ul > li:hover > .wp-block-post-title {
+    display: block;
+}
+
+.ehy-grid-12 > div > ul > li:hover > .wp-block-post-title a {
+    display: inline-block;
+    width: 100%;
+}
+
+
+
 
 /*---------------------
 NAVIGATION
@@ -116,7 +158,7 @@ nav.footer-nav > div > ul {
 Main Nav
 --------**/
 nav.main-nav > div {
-        padding: 0.3em calc(var(--page-margin) + var(--grid-unit));
+    padding: 0.3em calc(var(--page-margin) + var(--grid-unit));
 }
 
 /**--------
@@ -124,7 +166,8 @@ Mobile Nav
 --------**/
 
 nav.mobile-nav {
-    display: none; /*for now*/
+    display: none;
+    /*for now*/
 }
 
 /*---------------------
@@ -142,6 +185,7 @@ Color Variables
     --col-cool-grey-mid-light: hsl(200, 21%, 63%);
     --col-cool-grey-light: hsl(200, 21%, 89%);
     --col-cool-meta-white: hsl(200, 5%, 97%);
+    --col-cool-trans-bckg: hsla(200, 34%, 21%,0.9);
 }
 
 body {
@@ -163,6 +207,14 @@ main a {
     color: var(--col-cool-sub-black);
 }
 
+.ehy-grid-12 > div > ul > li > .wp-block-post-title {
+    background: var(--col-cool-trans-bckg);
+}
+
+.ehy-grid-12 > div > ul > li > .wp-block-post-title a {
+    color: var(--col-cool-grey-light);
+}
+
 /*---------------------
 TYPOGRAPHY
 ---------------------*/
@@ -174,7 +226,8 @@ body {
 }
 
 
-h1,h2 {
+h1,
+h2 {
     font-size: 3.4rem;
 }
 
@@ -190,6 +243,11 @@ h2 {
     font-size: 0.8em;
 }
 
+.ehy-grid-12 > div > ul > li > .wp-block-post-title {
+    font-weight: 400;
+    font-size: 1em;
+}
+
 /*---------------------
 COMPONENTS
 ---------------------*/
@@ -198,8 +256,8 @@ COMPONENTS
 Comp Placeholder
 --------**/
 
-div.placeholder {
-    width: calc(var(--grid-unit) *1); 
+.placeholder {
+    width: calc(var(--grid-unit) *1);
     height: calc(100vw / var(--grid-factor));
     font-size: calc((100vw / var(--grid-factor)) / 9);
     font-weight: 400;
@@ -208,15 +266,16 @@ div.placeholder {
     padding: var(--page-margin);
 }
 
-.grid-7 div.placeholder {
-    width: calc(var(--grid-unit) *2); 
+.grid-7 .placeholder {
+    width: calc(var(--grid-unit) *2);
 }
 
-div.placeholder p {
+.placeholder p {
     background: var(--col-cool-grey-mid-light);
     padding: 0.5em;
     height: 100%;
 }
+
 /**--------
 Comp Loop 7
 --------**/
@@ -245,7 +304,7 @@ ul.loop-7.var-1 > li:nth-child(3) {
 }
 
 ul.loop-7.var-1 > li:nth-child(5) {
-        width: calc(var(--grid-unit) * 4);
+    width: calc(var(--grid-unit) * 4);
 }
 
 /*---------------------
